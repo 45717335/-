@@ -27,7 +27,7 @@ xfgao@163.com
 
 
 
-
+![蜡烛图](https://github.com/45717335/Python_Candle/blob/main/Python_candle1.gif "蜡烛图")
 
 
 
@@ -49,6 +49,38 @@ xfgao@163.com
 
 
 ## 代码
+
+```python
+import csv
+import os
+import sys
+import webbrowser
+from pyecharts import Kline
+if __name__ == '__main__':
+    print(os.path.dirname(__file__))
+    print(os.path.dirname(os.path.realpath(sys.executable)))
+    s_input1=input("请输入包含 需要分析CSV的文件夹:")
+    for root, dirs, files in os.walk(s_input1):
+        for name in files:
+            print(os.path.join(root, name))
+            f=csv.reader(open(os.path.join(root, name),'r'))
+            kline = Kline(name)
+            ff = list(f)
+            v1 = ff[60:1:-1]
+            titblk = []
+            vlu1 = []
+            for x in v1:
+                titblk.append(x[0])
+                vlu1.append(x[1:5:1])
+            kline.add(name, titblk, vlu1)
+            kline.render("D:\\" + name + ".html")
+
+            webbrowser.open_new_tab("D:\\" + name + ".html")
+        break
+    input("TOBEcontinue")
+```
+
+
 
 ## 下载
 
