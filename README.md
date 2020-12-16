@@ -27,6 +27,7 @@ xfgao@163.com
 
 
 ![蜡烛图](https://github.com/45717335/Python_Candle/blob/main/Python_candle1.gif "蜡烛图")
+![蜡烛图test3_v4.py](https://github.com/45717335/Python_Candle/blob/Python_candle1.gif "蜡烛图test3_v4.py")
 
 
 ## 代码
